@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "encuestasapp-e528b": {
+      "hosting": {
+        "encuestas-app": [
+          "encuestasapp-e528b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "encuestasapp-e528b"
+  }
+}

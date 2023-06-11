@@ -1,0 +1,15 @@
+<div class="container mt-5 mb-5">
+
+    <h3 class="text-center mb-3">Reporte de respuestas por participantes</h3>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of preguntasOpciones">
+            <h5>{{item.pregunta}}</h5>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let opcion of item.opciones">
+                    <strong>{{opcion.nombre}}:</strong> Panticipantes: {{opcion.cantidad}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div>

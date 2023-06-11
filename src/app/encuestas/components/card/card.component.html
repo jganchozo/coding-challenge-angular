@@ -1,0 +1,14 @@
+<ul class="list-group mt-3">
+    <li class="list-group-item">
+
+        <div class="row">
+            <div class="col-md-9">
+                <h3>{{encuesta.titulo}}</h3>
+                <p>{{encuesta.descripcion}}</p>
+            </div>
+            <div class="col-md-3 text-end">
+                <a [routerLink]="['encuesta', encuesta.idencuesta]" class="btn btn-primary">Responder</a>
+            </div>
+        </div>
+    </li>
+</ul>

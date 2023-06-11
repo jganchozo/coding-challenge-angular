@@ -1,0 +1,12 @@
+<div class="card mt-3">
+      <div class="card-header">
+        <h5>{{pregunta.orden}}. {{pregunta.pregunta1}}</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="formGroup">
+          <div class="form-floating">
+            <input type="number" max="200" required min="0" class="form-control" [formControlName]="pregunta.idpregunta.toString()">
+          </div>
+        </form>
+      </div>
+    </div>

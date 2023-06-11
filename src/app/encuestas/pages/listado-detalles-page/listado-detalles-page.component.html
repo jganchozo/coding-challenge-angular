@@ -1,0 +1,15 @@
+<h1 *ngIf="tituloEncuesta.length > 0">{{ tituloEncuesta | uppercase}}</h1>
+
+<form [formGroup]="formulario">
+    <div *ngFor="let item of preguntas">
+        <app-item *ngIf="item.idtipoRespuesta == 1" [pregunta]="item" [formGroup]="formulario" [idPregunta]="item.idpregunta"></app-item>
+        <app-opcion-number *ngIf="item.idtipoRespuesta == 2" [pregunta]="item"
+            [formGroup]="formulario"></app-opcion-number>
+    </div>
+
+</form>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-primary mt-3 mb-5" (click)="guardarEncuesta()">Enviar Respuestas</button>
+    <button class="btn btn-danger mt-3 mb-5" routerLink="dashboard" type="button">Cancelar</button>
+</div>
+
